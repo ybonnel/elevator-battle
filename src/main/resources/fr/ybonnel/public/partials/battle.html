@@ -4,6 +4,6 @@
     <img ng-src="{{player.photo}}" class="photo"/>
 
     <h4>{{player.pseudo}}</h4>
-    <h5>{{player.score}} points</h5>
+    <h5>{{player.score}} points <span ng-show="$index">({{player.score - players[$index - 1].score}})</span></h5>
     <building id="building" player="player"></building>
 </div>
