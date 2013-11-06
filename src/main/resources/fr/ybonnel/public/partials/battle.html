@@ -1,0 +1,9 @@
+
+<div class="well" style="margin: 5px; display: inline-block"
+     ng-repeat="player in players">
+    <img ng-src="{{player.photo}}" class="photo"/>
+
+    <h4>{{player.pseudo}}</h4>
+    <h5>{{player.score}} points</h5>
+    <building id="building" player="player"></building>
+</div>

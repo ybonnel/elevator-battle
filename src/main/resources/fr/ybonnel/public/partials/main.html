@@ -1,0 +1,60 @@
+<h1>Battle</h1>
+
+<form name="form" class="form-horizontal" novalidate>
+    <fieldset>
+        <div class="control-group" ng-class="{true:'error', false:''}[form.pseudo1.$dirty && form.pseudo1.$invalid]">
+            <label class="control-label" for="pseudo1">Pseudo1</label>
+
+            <div class="controls">
+                <input type="text" id="pseudo1" name="pseudo1"
+                       ng-model="pseudo1"
+                       typeahead="pseudo for pseudo in pseudos | filter:$viewValue | limitTo:8"
+                       required>
+                <span class="help-inline">Required</span>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <div class="control-group" ng-class="{true:'error', false:''}[form.pseudo2.$dirty && form.pseudo2.$invalid]">
+            <label class="control-label" for="pseudo2">Pseudo2</label>
+
+            <div class="controls">
+                <input type="text" id="pseudo2" name="pseudo2"
+                       ng-model="pseudo2"
+                       typeahead="pseudo for pseudo in pseudos | filter:$viewValue | limitTo:8"
+                       required>
+                <span class="help-inline">Required</span>
+            </div>
+        </div>
+    </fieldset>
+
+    <div class="form-actions">
+        <button id="submit" type="submit" class="btn btn-primary" ng-click="submitPlayers(pseudo1, pseudo2)">Battle!</button>
+    </div>
+
+</form>
+
+<h1>See one elevator</h1>
+<form name="playerForm" class="form-horizontal" novalidate>
+    <fieldset>
+        <div class="control-group" ng-class="{true:'error', false:''}[playerForm.onepseudo.$dirty && playerForm.onepseudo.$invalid]">
+            <label class="control-label" for="onepseudo">Pseudo</label>
+
+            <div class="controls">
+                <input type="text" id="onepseudo" name="onepseudo"
+                       ng-model="onepseudo"
+                       typeahead="pseudo for pseudo in pseudos | filter:$viewValue | limitTo:8"
+                       required>
+                <span class="help-inline">Required</span>
+            </div>
+        </div>
+    </fieldset>
+
+    <div class="form-actions">
+        <button id="submitPlayer" type="submit" class="btn btn-primary" ng-click="submitPlayer(onepseudo)">Battle!</button>
+    </div>
+
+</form>
+
+
+
