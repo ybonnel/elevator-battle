@@ -9,14 +9,9 @@ public class PlayerInfo implements Serializable {
     private String pseudo;
     private String photo;
     private int score;
-    private int averageScore;
-    private int nbSuccess;
-    private int nbLose;
-    private int elevatorAtFloor;
-    private int peopleInTheElevator;
-    private boolean doorIsOpen;
-    private String lastErrorMessage;
-    private String state;
+    private List<Integer> floors;
+    private List<Integer> peopleInTheElevators;
+    private List<Boolean> doorsAreOpen;
     private List<FloorState> floorStates;
 
     public String getId() {
@@ -51,68 +46,28 @@ public class PlayerInfo implements Serializable {
         this.score = score;
     }
 
-    public int getAverageScore() {
-        return averageScore;
+    public List<Integer> getFloors() {
+        return floors;
     }
 
-    public void setAverageScore(int averageScore) {
-        this.averageScore = averageScore;
+    public void setFloors(List<Integer> floors) {
+        this.floors = floors;
     }
 
-    public int getNbSuccess() {
-        return nbSuccess;
+    public List<Integer> getPeopleInTheElevators() {
+        return peopleInTheElevators;
     }
 
-    public void setNbSuccess(int nbSuccess) {
-        this.nbSuccess = nbSuccess;
+    public void setPeopleInTheElevators(List<Integer> peopleInTheElevators) {
+        this.peopleInTheElevators = peopleInTheElevators;
     }
 
-    public int getNbLose() {
-        return nbLose;
+    public List<Boolean> getDoorsAreOpen() {
+        return doorsAreOpen;
     }
 
-    public void setNbLose(int nbLose) {
-        this.nbLose = nbLose;
-    }
-
-    public int getElevatorAtFloor() {
-        return elevatorAtFloor;
-    }
-
-    public void setElevatorAtFloor(int elevatorAtFloor) {
-        this.elevatorAtFloor = elevatorAtFloor;
-    }
-
-    public int getPeopleInTheElevator() {
-        return peopleInTheElevator;
-    }
-
-    public void setPeopleInTheElevator(int peopleInTheElevator) {
-        this.peopleInTheElevator = peopleInTheElevator;
-    }
-
-    public boolean isDoorIsOpen() {
-        return doorIsOpen;
-    }
-
-    public void setDoorIsOpen(boolean doorIsOpen) {
-        this.doorIsOpen = doorIsOpen;
-    }
-
-    public String getLastErrorMessage() {
-        return lastErrorMessage;
-    }
-
-    public void setLastErrorMessage(String lastErrorMessage) {
-        this.lastErrorMessage = lastErrorMessage;
-    }
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
+    public void setDoorsAreOpen(List<Boolean> doorsAreOpen) {
+        this.doorsAreOpen = doorsAreOpen;
     }
 
     public List<FloorState> getFloorStates() {
