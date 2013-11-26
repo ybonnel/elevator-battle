@@ -4,6 +4,6 @@ angular.module('BattleApp').directive('building', function () {
         scope: {
             player: '='
         },
-        templateUrl: 'partials/building.html'
+        templateUrl: 'partials/building.html?version=1.0.0'
     };
 });
